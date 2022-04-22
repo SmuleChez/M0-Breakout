@@ -1,0 +1,159 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_SAMD:ATSAMDA1G15B-A U?
+U 1 1 62633435
+P 2550 4300
+F 0 "U?" H 2550 2311 50  0000 C CNN
+F 1 "ATSAMDA1G15B-A" H 2550 2220 50  0000 C CNN
+F 2 "Package_QFP:TQFP-48_7x7mm_P0.5mm" H 3450 2450 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/SAM_D21_DA1_Family_Data%20Sheet_DS40001882E.pdf" H 2550 5300 50  0001 C CNN
+	1    2550 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6263603E
+P 5000 2950
+F 0 "#PWR?" H 5000 2700 50  0001 C CNN
+F 1 "GND" H 5005 2777 50  0000 C CNN
+F 2 "" H 5000 2950 50  0001 C CNN
+F 3 "" H 5000 2950 50  0001 C CNN
+	1    5000 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 626383C1
+P 5000 1900
+F 0 "#PWR?" H 5000 1750 50  0001 C CNN
+F 1 "+5V" H 5015 2073 50  0000 C CNN
+F 2 "" H 5000 1900 50  0001 C CNN
+F 3 "" H 5000 1900 50  0001 C CNN
+	1    5000 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 62639F87
+P 5000 2100
+F 0 "R1" H 5059 2146 50  0000 L CNN
+F 1 "10k" H 5059 2055 50  0000 L CNN
+F 2 "" H 5000 2100 50  0001 C CNN
+F 3 "~" H 5000 2100 50  0001 C CNN
+	1    5000 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 6263B40B
+P 5250 2350
+F 0 "R2" H 5309 2396 50  0000 L CNN
+F 1 "330" H 5309 2305 50  0000 L CNN
+F 2 "" H 5250 2350 50  0001 C CNN
+F 3 "~" H 5250 2350 50  0001 C CNN
+	1    5250 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 6263C0E3
+P 5000 2700
+F 0 "C1" H 5115 2746 50  0000 L CNN
+F 1 "100nF" H 5115 2655 50  0000 L CNN
+F 2 "" H 5038 2550 50  0001 C CNN
+F 3 "~" H 5000 2700 50  0001 C CNN
+	1    5000 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2950 5000 2850
+Wire Wire Line
+	5000 2550 5000 2350
+Wire Wire Line
+	5150 2350 5000 2350
+Connection ~ 5000 2350
+Wire Wire Line
+	5000 2350 5000 2200
+Wire Wire Line
+	5000 2000 5000 1900
+Wire Wire Line
+	5350 2350 5500 2350
+$Comp
+L Switch:SW_MEC_5E SW1
+U 1 1 62649161
+P 5700 2400
+F 0 "SW1" H 5700 2693 50  0000 C CNN
+F 1 "SW_MEC_5E" H 5700 2694 50  0001 C CNN
+F 2 "" H 5700 2700 50  0001 C CNN
+F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 5700 2700 50  0001 C CNN
+	1    5700 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2300 5500 2350
+Connection ~ 5500 2350
+Wire Wire Line
+	5500 2350 5500 2400
+Wire Wire Line
+	5900 2300 5900 2350
+$Comp
+L power:GND #PWR?
+U 1 1 62653D08
+P 6050 2450
+F 0 "#PWR?" H 6050 2200 50  0001 C CNN
+F 1 "GND" H 6055 2277 50  0000 C CNN
+F 2 "" H 6050 2450 50  0001 C CNN
+F 3 "" H 6050 2450 50  0001 C CNN
+	1    6050 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 2350 6050 2350
+Wire Wire Line
+	6050 2350 6050 2450
+Connection ~ 5900 2350
+Wire Wire Line
+	5900 2350 5900 2400
+$Comp
+L power:GND #PWR?
+U 1 1 62655503
+P 2650 6500
+F 0 "#PWR?" H 2650 6250 50  0001 C CNN
+F 1 "GND" H 2655 6327 50  0000 C CNN
+F 2 "" H 2650 6500 50  0001 C CNN
+F 3 "" H 2650 6500 50  0001 C CNN
+	1    2650 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 6200 2650 6250
+Text GLabel 4900 2350 0    50   Output ~ 0
+RESET
+Wire Wire Line
+	5000 2350 4900 2350
+Text GLabel 1750 6000 0    50   Input ~ 0
+RESET
+Wire Wire Line
+	1750 6000 1850 6000
+Wire Wire Line
+	2550 6200 2550 6250
+Wire Wire Line
+	2550 6250 2650 6250
+Connection ~ 2650 6250
+Wire Wire Line
+	2650 6250 2650 6500
+$EndSCHEMATC
